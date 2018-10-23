@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="testapp.dgreenberg.com.CourseManager">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppBaseTheme">
+        <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.CourseList"></activity>
+        <activity android:name=".activities.CourseEdit"></activity>
+        <activity android:name=".activities.TermList"></activity>
+        <activity android:name=".activities.TermEdit"></activity>
+        <activity android:name=".activities.AssessmentList"></activity>
+        <activity android:name=".activities.AssessmentEdit"></activity>
+        <activity android:name=".activities.NoteList"></activity>
+        <activity android:name=".activities.NoteEdit"></activity>
+
+        <receiver android:name=".AlertReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.ALARM_ACTION"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

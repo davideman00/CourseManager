@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintOuter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/constraintInner"
+        android:layout_width="386dp"
+        android:layout_height="157dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <Button
+            android:id="@+id/btnSaveTerm"
+            android:layout_width="79dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="4dp"
+            android:text="Save Term"
+            app:layout_constraintStart_toEndOf="@+id/editTermTitle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewTermTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_marginStart="16dp"
+            android:text="Term Title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTermTitle" />
+
+        <EditText
+            android:id="@+id/editTermStart"
+            android:layout_width="122dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:selectAllOnFocus="false"
+            android:singleLine="false"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTermTitle" />
+
+
+        <TextView
+            android:id="@+id/textViewTermStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Term Start"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTermStart" />
+
+        <EditText
+            android:id="@+id/editTermEnd"
+            android:layout_width="122dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="27dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:selectAllOnFocus="false"
+            android:singleLine="false"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/editTermStart"
+            app:layout_constraintTop_toBottomOf="@+id/editTermTitle" />
+
+        <TextView
+            android:id="@+id/textViewTermEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:text="Term End"
+            app:layout_constraintStart_toEndOf="@+id/textViewTermStart"
+            app:layout_constraintTop_toBottomOf="@+id/editTermEnd" />
+
+        <EditText
+            android:id="@+id/editTermTitle"
+            android:layout_width="158dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="7dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/course_assoc_listview"
+        android:layout_width="383dp"
+        android:layout_height="322dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintInner" />
+</android.support.constraint.ConstraintLayout>
